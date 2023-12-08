@@ -15,7 +15,7 @@ const NextCard = ({ State = "live", id }) => {
 
 
             <div className='absolute top-0 w-full z-10 flex flex-col items-center justify-between overflow-hidden  text-purple'>
-                <div className='flex flex-row w-full text-sm justify-between py-2 px-5 bg-purple rounded-t-3xl  text-light'>
+                <div className='flex flex-row w-full text-sm justify-between py-2 px-5 bg-purple rounded-t-3xl  text-light  select-none '>
 
                     <h2 className='font-bold flex text-m'>
                      <span><GoPlay className='text-xl mr-1' /></span>
@@ -29,7 +29,7 @@ const NextCard = ({ State = "live", id }) => {
                         <div className='absolute top-10 left-[50%] translate-x-[-50%] text-[gray] font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
                         <div className='absolute top-4 left-[50%] translate-x-[-50%] text-cyan font-black  '>UP</div>
 
-                        <Image className='w-full h-16 z-9 ' src={GrayUpArrow} />
+                        <Image className='w-full h-16 z-9  select-none ' src={GrayUpArrow} alt="" />
 
                     </div>
                     <div className=" w-[95%] flex flex-col mx-auto p-[2px] bg-gradient-to-b from-cyan to-purple rounded-2xl relative z-10">
@@ -48,7 +48,7 @@ const NextCard = ({ State = "live", id }) => {
                         <div className='absolute top-2 left-[50%] translate-x-[-50%] text-light font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
                         <div className='absolute top-6 left-[50%] translate-x-[-50%] text-red font-black  '>DOWN</div>
 
-                        <Image src={GrayDownArrow} className='w-full h-16 z-9' />
+                        <Image src={GrayDownArrow} className='w-full h-16 z-9  select-none ' alt="" />
                     </div>
                 </div>
 

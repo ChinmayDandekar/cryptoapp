@@ -14,7 +14,7 @@ const LaterCard = ({ State = "live", id }) => {
 
 
             <div className='absolute top-0 w-full z-10 flex flex-col items-center justify-between overflow-hidden  text-[grey]'>
-                <div className='flex flex-row w-full text-sm justify-between py-2 px-5 bg-[lightgrey] rounded-t-3xl  text-textcol'>
+                <div className='flex flex-row w-full text-sm justify-between py-2 px-5 bg-[lightgrey] rounded-t-3xl  text-textcol  select-none '>
 
                     <h2 className='font-bold flex text-m'>
                         <AiOutlineClockCircle className='text-xl mr-1'/>
@@ -26,7 +26,7 @@ const LaterCard = ({ State = "live", id }) => {
                     <div className='w-full h-auto mx-auto relative'>
                         <div className='absolute top-6 text-xl left-[50%] translate-x-[-50%] text-[grey] font-black  '>UP</div>
 
-                        <Image className='w-full h-16 z-9 ' src={GrayUpArrow} />
+                        <Image className='w-full h-16 z-9  select-none ' src={GrayUpArrow} alt="" />
 
                     </div>
                     <div className=" w-[95%] flex flex-col  h-20 mx-auto p-[2px] border-2 border-solid border-[lightgrey] rounded-2xl relative z-10">
@@ -39,7 +39,7 @@ const LaterCard = ({ State = "live", id }) => {
                     <div className={`w-full h-auto mx-auto relative`} >
                         <div className='absolute top-3 text-xl left-[50%] translate-x-[-50%] text-[grey] font-black  '>DOWN</div>
 
-                        <Image src={GrayDownArrow} className='w-full h-16 z-9' />
+                        <Image src={GrayDownArrow} className='w-full h-16 z-9  select-none ' alt=""/>
                     </div>
                 </div>
 

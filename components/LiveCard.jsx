@@ -17,7 +17,7 @@ const LiveCard = ({ State = "live", id }) => {
 
 
       <div className='absolute top-0 w-full z-10 flex flex-col items-center justify-between py-2 px-5 text-purple'>
-        <div className='flex flex-row w-full text-sm justify-between '>
+        <div className='flex flex-row w-full text-sm justify-between select-none  '>
          
           <h2 className='font-bold flex  text-m '>
           <span><GoPlay className='text-xl mr-1' /></span>
@@ -30,7 +30,7 @@ const LiveCard = ({ State = "live", id }) => {
             <div className='absolute top-10 left-[50%] translate-x-[-50%] text-[gray] font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
             <div className='absolute top-4 left-[50%] translate-x-[-50%] text-cyan font-black  '>UP</div>
 
-            <Image className='w-full h-16 z-9 ' src={GrayUpArrow} />
+            <Image className='w-full h-16 z-9  select-none ' src={GrayUpArrow} alt="" />
 
           </div>
           <div className=" w-[95%] flex flex-col p-4 h-32 mx-auto border-2 border-solid border-red rounded-2xl relative z-10">
@@ -52,19 +52,9 @@ const LiveCard = ({ State = "live", id }) => {
           <div className={`w-full h-auto mx-auto relative`} >
             <div className='absolute top-2 left-[50%] translate-x-[-50%] text-light font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
             <div className='absolute top-6 left-[50%] translate-x-[-50%] text-light font-black  '>DOWN</div>
-            {
-              State === "live" || State === "expired" ?
-                <Image src={RedDownArrow} className='w-full h-16 z-9' />
-                :
-                null
-            }
-
-            {
-              State === "next" || State === "later" ?
-                <Image src={GrayDownArrow} className='w-full h-16 z-9' />
-                :
-                null
-            }
+         
+                <Image src={GrayDownArrow} className='w-full h-16 z-9  select-none ' alt="" />
+          
           </div>
         </div>
 

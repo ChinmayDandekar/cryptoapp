@@ -10,7 +10,7 @@ const TimeCounter = () => {
                 <div className='text-[12px] px-2 font-medium text-textcol lg:text-[10px]'>5m</div>
 
             </div>
-            <Image src={ClockImage} className='w-20 aspect-square absolute -top-4 right-0  lg:w-16' />
+            <Image src={ClockImage} className='w-20 aspect-square absolute -top-4 right-0  lg:w-16 select-none' alt="Clock Image" />
         </div>
   )
 }
