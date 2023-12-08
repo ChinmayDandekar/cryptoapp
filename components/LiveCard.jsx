@@ -50,10 +50,10 @@ const LiveCard = ({ State = "live", id }) => {
 
           </div>
           <div className={`w-full h-auto mx-auto relative`} >
-            <div className='absolute top-2 left-[50%] translate-x-[-50%] text-[grey] font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
-            <div className='absolute top-6 left-[50%] translate-x-[-50%] text-red font-black  '>DOWN</div>
+            <div className='absolute top-2 left-[50%] translate-x-[-50%] text-light font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
+            <div className='absolute top-6 left-[50%] translate-x-[-50%] text-light font-black  '>DOWN</div>
          
-                <Image src={GrayDownArrow} className='w-full h-16 z-9  select-none ' alt="" />
+                <Image src={RedDownArrow} className='w-full h-16 z-9  select-none ' alt="" />
           
           </div>
         </div>
