@@ -2,9 +2,9 @@ import React from 'react'
 import RabbitCardImage from "@/public/rabbitcards.png"
 import Image from 'next/image'
 
-const RabbitArrowButtons = () => {
+const RabbitArrowButtons = ( {className} ) => {
   return (
-      <div>
+      <div className={`absolute left-[50%] translate-x-[-50%] lg:top-40 ${className}`} >
           <div className='flex flex-row relative text-cyan font-bold'>
           <div className='bg-light py-1 pl-2 pr-10 rounded-l-full'> {"<-"} </div>
           <div className='bg-light py-1 pr-2 pl-10 rounded-r-full'> {"->"} </div>
