@@ -3,21 +3,21 @@ import React from 'react'
 import RedDownArrow from '@/public/reddownarrow.svg'
 import GrayDownArrow from '@/public/graydownarrow.svg'
 import GrayUpArrow from '@/public/grayuparrow.svg'
-import PlayCircle from '@/public/playcircle.svg'
 import { GoPlay } from "react-icons/go";
 
 
-const LiveCard = ({ State = "live", id }) => {
+const LiveCard = ({ Key, className }) => {
 
-  id = "#218286"
+  const id = "#218286"
   return (
-    <div className="min-w-[300px] min-h-[350px] bg-light rounded-3xl relative z-10" >
+    <div  key={Key} className={`min-w-[275px] aspect-[6/7] bg-light rounded-3xl relative z-10  select-none hover:scale-105 transition ease-in-out ${className}`} >
+
      
           <div className='w-full h-2 absolute top-8 left-0 bg-purple '></div>
 
 
-      <div className='absolute top-0 w-full z-10 flex flex-col items-center justify-between py-2 px-5 text-purple'>
-        <div className='flex flex-row w-full text-sm justify-between select-none  '>
+      <div className='absolute top-0 w-full z-10 flex flex-col items-center justify-between  text-purple'>
+        <div className='flex flex-row w-full text-sm justify-between select-none py-2 px-5  '>
          
           <h2 className='font-bold flex  text-m '>
           <span><GoPlay className='text-xl mr-1' /></span>
@@ -25,7 +25,7 @@ const LiveCard = ({ State = "live", id }) => {
           </h2>
           <h3>{id}</h3>
         </div>
-        <div className='w-full h-auto flex flex-col mt-8'>
+        <div className='w-full h-auto flex flex-col mt-4 px-2'>
           <div className='w-full h-auto mx-auto relative'>
             <div className='absolute top-10 left-[50%] translate-x-[-50%] text-[gray] font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
             <div className='absolute top-4 left-[50%] translate-x-[-50%] text-cyan font-black  '>UP</div>

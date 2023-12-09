@@ -5,11 +5,12 @@ import GrayDownArrow from '@/public/graydownarrow.svg'
 import GrayUpArrow from '@/public/grayuparrow.svg'
 import { AiOutlineClockCircle } from "react-icons/ai";
 
-const LaterCard = ({ State = "live", id }) => {
+const LaterCard = ({ Key, className }) => {
 
-    id = "#218286"
+    const id = "#218286"
     return (
-        <div className=" min-w-[300px] h-[300px] bg-light rounded-3xl relative z-10" >
+        <div  key={Key} className={` min-w-[275px] h-[280px] bg-light rounded-3xl relative z-10  select-none hover:scale-105 transition ease-in-out ${className}`} >
+
 
 
 
@@ -22,7 +23,7 @@ const LaterCard = ({ State = "live", id }) => {
                     </h2>
                     <h3>{id}</h3>
                 </div>
-                <div className='w-full h-auto flex flex-col mt-8 px-2'>
+                <div className='w-full h-auto flex flex-col mt-5 px-2'>
                     <div className='w-full h-auto mx-auto relative'>
                         <div className='absolute top-6 text-xl left-[50%] translate-x-[-50%] text-[grey] font-black  '>UP</div>
 

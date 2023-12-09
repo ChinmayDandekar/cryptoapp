@@ -6,11 +6,11 @@ import GrayUpArrow from '@/public/grayuparrow.svg'
 import { GoPlay } from "react-icons/go";
 
 
-const NextCard = ({ State = "live", id }) => {
+const NextCard = ({ Key, className }) => {
 
-    id = "#218286"
+    const id = "#218286"
     return (
-        <div className=" min-w-[300px] min-h-[350px] bg-light rounded-3xl relative z-10" >
+        <div  key={Key} className={`min-w-[275px] aspect-[6/7] bg-light rounded-3xl relative z-10  select-none hover:scale-105 transition ease-in-out ${className}`} >
 
 
 
@@ -24,7 +24,7 @@ const NextCard = ({ State = "live", id }) => {
                     </h2>
                     <h3>{id}</h3>
                 </div>
-                <div className='w-full h-auto flex flex-col mt-6 px-2'>
+                <div className='w-full h-auto flex flex-col mt-2 px-2'>
                     <div className='w-full h-auto mx-auto relative'>
                         <div className='absolute top-10 left-[50%] translate-x-[-50%] text-[gray] font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
                         <div className='absolute top-4 left-[50%] translate-x-[-50%] text-cyan font-black  '>UP</div>
@@ -40,8 +40,8 @@ const NextCard = ({ State = "live", id }) => {
                                 <div>prize pool:</div>
                                 <div> 8.5143 BNB</div>
                             </div>
-                            <div className='w-full py-3 bg-cyan text-center text-xs text-light font-bold rounded-2xl border-[1px] border-solid border-b-[grey] '>Enter UP</div>
-                            <div className='w-full py-3 bg-red text-center text-xs text-light font-bold rounded-2xl border-[1px] border-solid border-b-[grey] '>Enter DOWN</div>
+                            <div className='w-full py-3 bg-cyan text-center text-xs text-light font-bold rounded-2xl border-[1px] border-solid border-b-[grey] hover:scale-105 transition ease-in-out active:border-light active:bg-cyan/75'>Enter UP</div>
+                            <div className='w-full py-3 bg-red text-center text-xs text-light font-bold rounded-2xl border-[1px] border-solid border-b-[grey] hover:scale-105 transition ease-in-out active:border-light active:bg-red/75 '>Enter DOWN</div>
                         </div>
                     </div>
                     <div className={`w-full h-auto mx-auto relative`} >

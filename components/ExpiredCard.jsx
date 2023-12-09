@@ -5,31 +5,31 @@ import GrayDownArrow from '@/public/graydownarrow.svg'
 import GrayUpArrow from '@/public/grayuparrow.svg'
 import { MdBlockFlipped } from "react-icons/md";
 
-const ExpiredCard = ({ State = "live", id }) => {
+const ExpiredCard = ({ Key, className  }) => {
 
-  id = "#218286"
+  const id = "#218286"
   return (
-    <div className=" min-w-[300px] min-h-[350px] bg-light rounded-3xl relative z-10 col-span-1 select-none " >
-    
-    <div className='absolute top-0 w-full h-full bg-[grey] bg-opacity-30 rounded-3xl z-20 '></div>
+    <div key={Key} className={` min-w-[275px] aspect-[6/7] bg-light rounded-3xl relative z-10  select-none hover:scale-105 transition ease-in-out  ${className}`} >
 
-       
+      <div className='absolute top-0 w-full h-full bg-[grey] bg-opacity-30 rounded-3xl z-20 '></div>
+
+
       <div className='absolute top-0 w-full z-10 flex flex-col items-center justify-between overflow-hidden  text-purple'>
         <div className='flex flex-row w-full text-sm justify-between py-2 px-5 bg-[lightgrey] rounded-t-3xl  text-[grey]'>
 
-                  <h2 className='font-bold flex text-m'>
-<MdBlockFlipped className='text-xl mr-1' />
-                      
+          <h2 className='font-bold flex text-m'>
+            <MdBlockFlipped className='text-xl mr-1' />
+
             Expired
           </h2>
           <h3>{id}</h3>
         </div>
-        <div className='w-full h-auto flex flex-col mt-8 px-2'>
+        <div className='w-full h-auto flex flex-col mt-4 px-2'>
           <div className='w-full h-auto mx-auto relative'>
             <div className='absolute top-10 left-[50%] translate-x-[-50%] text-[gray] font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
             <div className='absolute top-4 left-[50%] translate-x-[-50%] text-cyan font-black  '>UP</div>
 
-            <Image className='w-full h-16 z-9 ' src={GrayUpArrow} alt="arrow image"/>
+            <Image className='w-full h-16 z-9 ' src={GrayUpArrow} alt="arrow image" />
 
           </div>
           <div className=" w-[95%] flex flex-col p-4 h-32 mx-auto border-2 border-solid border-red rounded-2xl relative z-10">
@@ -51,8 +51,8 @@ const ExpiredCard = ({ State = "live", id }) => {
           <div className={`w-full h-auto mx-auto relative`} >
             <div className='absolute top-2 left-[50%] translate-x-[-50%] text-light font-bold  text-xs ' >1.87x <span className='font-medium'>Payout</span></div>
             <div className='absolute top-6 left-[50%] translate-x-[-50%] text-light font-black  '>DOWN</div>
-     
-                <Image src={RedDownArrow} className='w-full h-16 z-9' alt="arrow image" />
+
+            <Image src={RedDownArrow} className='w-full h-16 z-9' alt="arrow image" />
           </div>
         </div>
 
